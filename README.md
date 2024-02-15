@@ -10,7 +10,7 @@
 
 ▶ 실행 방법 (in Chrome)
 
-localhost:9090/board/로 URL이 이동할 텐데
+localhost:9092/board/로 URL이 이동할 텐데
 
 이 URL 뒤에 "board/list" 를 쳐주면 메인페이지로 이동
 
