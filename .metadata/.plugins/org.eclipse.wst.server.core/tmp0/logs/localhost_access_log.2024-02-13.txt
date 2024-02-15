@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:21:24 +0900] "GET /board/ HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:21:31 +0900] "GET /board/board/list HTTP/1.1" 200 5165
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:21:31 +0900] "GET /board/resources/js/jquery-3.6.3.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:22:18 +0900] "GET /board/board/detail?bno=112 HTTP/1.1" 200 1414
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:22:36 +0900] "GET /board/board/detail?bno=112 HTTP/1.1" 200 1414
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:22:38 +0900] "GET /board/board/delete/action?bno=112 HTTP/1.1" 200 5160
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:23:00 +0900] "GET /board/board/detail?bno=108 HTTP/1.1" 200 1397
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:23:18 +0900] "GET /board/board/modify?bno=108 HTTP/1.1" 200 459
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:23:43 +0900] "GET /board/board/list?page=1 HTTP/1.1" 200 5160
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:14:23:45 +0900] "GET /board/board/write HTTP/1.1" 200 432

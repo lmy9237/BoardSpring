@@ -1,0 +1,112 @@
+<%@page import="com.my.dto.*"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.6.3.min.js"></script>
+	<script>
+		$(function() {
+			$("#btn_to_list").click(function() {
+				//history.back(-1);
+				location.href = "${pageContext.request.contextPath}/board/list?page=1";   // (단순화) 1페이지 목록보기로 이동.
+			});
+			$("#btn_modify").click(function() {
+				location.href = "${pageContext.request.contextPath}/board/modify?bno=${BoardDto.bno}";
+			});
+			$("#btn_delete").click(function() {
+				location.href = "${pageContext.request.contextPath}/board/delete/action?bno=${BoardDto.bno}";
+			});
+		});
+	</script>
+	<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        padding: 20px;
+        width: 800px;
+    }
+    h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    table {
+        width: 800px;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+        text-align: left;
+    }
+    #btn_to_list, #btn_modify, #btn_delete {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    #btn_to_list:hover, #btn_modify:hover, #btn_delete:hover {
+        background-color: #45a049;
+    }
+    #buttons{
+    	display: flex;
+    	justify-content: flex-end;
+    }
+</style>
+</head>
+<body>
+	<h1>게시글 상세보기</h1>
+	<table>
+		<tr>
+			<th>글 번호</th>
+			<td>${BoardDto.bno}</td>
+		</tr>
+		<tr>
+			<th>작성자</th>
+			<td>${BoardDto.writer}</td>
+		</tr>
+		<tr>
+			<th>작성일시</th>
+			<td>${BoardDto.writedate}</td>
+		</tr>
+		<tr>
+			<th>제목</th>
+			<td>${BoardDto.title}</td>
+		</tr>
+		<tr>
+			<th>내용</th>
+			<td>${BoardDto.content}</td>
+		</tr>
+		<tr>
+			<th>조회수</th>
+			<td>${BoardDto.hitcount}</td>
+		</tr>
+	</table>	
+	<div id="buttons">
+		<button id="btn_to_list">목록보기</button>
+		<button id="btn_modify">수정하기</button>
+		<button id="btn_delete">삭제하기</button>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
